@@ -39,3 +39,9 @@ class Fighter:
                     f"at {target.name}'s ineffective attack.", libtcod.white)})
 
         return results
+
+    def heal(self, amount):
+        self.hp += amount
+
+        if self.hp > self.max_hp:
+            self.hp = self.max_hp
